@@ -1,0 +1,103 @@
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="Name"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Name"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a Name.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="4"
+        name="Datapoint"
+        ngModel
+        required
+        placeholder="Datapoint"
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter a Datapoint</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="format_type"
+        ngModel
+        required
+        minlength="3"
+        placeholder="format_type"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a type.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="Size"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Size"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a size.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="Seed"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Seed"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a seed</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="dependency"
+        ngModel
+        required
+        minlength="3"
+        placeholder="dependency"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter dependency.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="expression"
+        ngModel
+        required
+        minlength="3"
+        placeholder="expression"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a expression.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="Group"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Group"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a group.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Post</button>
+  </form>
+</mat-card>
